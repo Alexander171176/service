@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
+import Sidebar from '@/Partials/Admin/Sidebar.vue'
 import ApplicationMark from '@/Components/ApplicationMark.vue';
 import Banner from '@/Components/Banner.vue';
 import Dropdown from '@/Components/Dropdown.vue';
@@ -12,6 +13,7 @@ defineProps({
     title: String,
 });
 
+const sidebarOpen = ref(false);
 const showingNavigationDropdown = ref(false);
 
 const switchToTeam = (team) => {
@@ -32,6 +34,8 @@ const logout = () => {
         <Head :title="title" />
 
         <Banner />
+
+        <Sidebar />
 
         <div class="min-h-screen bg-gray-100">
             <nav class="bg-white border-b border-gray-100">

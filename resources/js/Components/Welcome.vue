@@ -8,14 +8,15 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
             <ApplicationLogo class="block h-12 w-auto" />
 
             <h1 class="mt-8 text-2xl font-medium text-gray-900">
-                Welcome to your Jetstream application!
+                Добро пожаловать в ваше приложение Jetstream!
             </h1>
 
             <p class="mt-6 text-gray-500 leading-relaxed">
-                Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed
-                to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe
-                you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
-                ecosystem to be a breath of fresh air. We hope you love it.
+                Laravel Jetstream обеспечивает прекрасную и надежную отправную точку для вашего следующего приложения Laravel.
+                Laravel разработан для того, чтобы помочь вам создать ваше приложение, используя простую,
+                мощную и приятную среду разработки. Мы считаем, что вам должно нравиться выражать свой
+                творческий потенциал с помощью программирования, поэтому мы потратили время на тщательную разработку
+                экосистемы Laravel, чтобы она стала глотком свежего воздуха. Мы надеемся, что вам это понравится.
             </p>
         </div>
 
@@ -26,17 +27,17 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                     </svg>
                     <h2 class="ms-3 text-xl font-semibold text-gray-900">
-                        <a href="https://laravel.com/docs">Documentation</a>
+                        <a href="https://laravel.com/docs/10.x">Документация Laravel</a>
                     </h2>
                 </div>
 
                 <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                    Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end.
+                    В Laravel есть замечательная документация, охватывающая каждый аспект фреймворка. Независимо от того, являетесь ли вы новичком в фреймворке или имеете предыдущий опыт, мы рекомендуем прочитать всю документацию от начала до конца.
                 </p>
 
                 <p class="mt-4 text-sm">
                     <a href="https://laravel.com/docs" class="inline-flex items-center font-semibold text-indigo-700">
-                        Explore the documentation
+                        Ознакомьтесь с документацией
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ms-1 w-5 h-5 fill-indigo-500">
                             <path fill-rule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clip-rule="evenodd" />
@@ -56,12 +57,12 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                 </div>
 
                 <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                    Laracasts предлагает тысячи видеоуроков по разработке на Laravel, PHP и JavaScript. Ознакомьтесь с ними, убедитесь сами и значительно повысьте свои навыки разработки в процессе.
                 </p>
 
                 <p class="mt-4 text-sm">
                     <a href="https://laracasts.com" class="inline-flex items-center font-semibold text-indigo-700">
-                        Start watching Laracasts
+                        Начните смотреть трансляции Laracasts
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ms-1 w-5 h-5 fill-indigo-500">
                             <path fill-rule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clip-rule="evenodd" />
@@ -81,7 +82,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                 </div>
 
                 <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                    Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.
+                    Laravel Jetstream создан с использованием Tailwind, потрясающего CSS-фреймворка, который не встанет у вас на пути. Вы будете поражены, насколько легко вы сможете создавать и поддерживать свежий, современный дизайн, имея под рукой этот замечательный фреймворк.
                 </p>
             </div>
 
@@ -91,12 +92,12 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
                     </svg>
                     <h2 class="ms-3 text-xl font-semibold text-gray-900">
-                        Authentication
+                        Идентификация
                     </h2>
                 </div>
 
                 <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                    Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started with what matters most: building your application.
+                    В Laravel Jetstream включены средства аутентификации и регистрации, а также поддержка проверки электронной почты пользователей и сброса забытых паролей. Итак, вы можете приступать к самому важному: созданию вашего приложения.
                 </p>
             </div>
         </div>
