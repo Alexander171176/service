@@ -1,21 +1,17 @@
 <script setup>
-import AdminLayout from '@/Layouts/AdminLayout.vue';
+import AppLayout from '@/Layouts/AppLayout.vue'
 </script>
 
 <template>
-    <AdminLayout title="Admin">
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Admin
-            </h2>
-        </template>
+  <AppLayout title="Администратор">
+    <template #header>
+        <h2 class="text-center font-semibold text-slate-800 text-xl leading-tight">Администратор ✨</h2>
+    </template>
 
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-
-                </div>
-            </div>
-        </div>
-    </AdminLayout>
+    <div class="py-8">
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg"></div>
+      </div>
+    </div>
+  </AppLayout>
 </template>
