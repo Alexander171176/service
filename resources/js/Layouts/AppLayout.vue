@@ -6,6 +6,7 @@ import DropdownLink from '@/Components/DropdownLink.vue'
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import Sidebar from '@/Partials/Admin/Sidebar.vue'
 import ApplicationMark from '@/Components/ApplicationMark.vue'
+import ThemeToggle from '@/Components/User/ThemeToggle/ThemeToggle.vue'
 
 defineProps({
     title: String
@@ -38,12 +39,18 @@ const logout = () => {
         <!-- Sidebar -->
         <Sidebar :sidebarOpen="sidebarOpen" @close-sidebar="sidebarOpen = false"/>
 
-        <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-gray-100">
+        <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-gray-100 dark:bg-gray-900">
 
             <!-- Header -->
             <div
-                class="sticky top-0 bg-white dark:bg-[#182235] border-b border-slate-200 dark:border-slate-700 z-30">
-                <nav class="bg-white border-b border-gray-100">
+                class="sticky
+                       top-0
+                       bg-gray-300
+                       dark:bg-gray-800
+                       border-b border-slate-200
+                       dark:border-slate-700
+                       z-30">
+                <nav class="border-b border-gray-100">
                     <!-- Primary Navigation Menu -->
                     <div class="max-w-full mx-auto px-4 sm:px-0">
                         <div class="flex justify-between h-16">
@@ -69,11 +76,19 @@ const logout = () => {
                                                       class="inline-flex
                                                              items-center
                                                              px-3 py-2
-                                                             border border-transparent
-                                                             text-md leading-4 font-medium
-                                                             rounded-md text-slate-500
-                                                             bg-white hover:text-slate-700
-                                                             focus:outline-none focus:bg-gray-50
+                                                             border
+                                                             border-transparent
+                                                             text-md
+                                                             leading-4
+                                                             font-medium
+                                                             rounded-md
+                                                             text-slate-500
+                                                             bg-white
+                                                             dark:bg-slate-500
+                                                             dark:text-slate-100
+                                                             hover:text-slate-700
+                                                             focus:outline-none
+                                                             focus:bg-gray-50
                                                              active:bg-gray-50
                                                              transition ease-in-out duration-150"
                                                   >
@@ -235,6 +250,11 @@ const logout = () => {
                                         </template>
                                     </Dropdown>
                                 </div>
+
+                                <!-- ThemeToggle -->
+                                <div class="mx-2 flex items-center">
+                                    <ThemeToggle/>
+                                </div>
                             </div>
 
                             <!-- Hamburger -->
@@ -393,18 +413,19 @@ const logout = () => {
                             </div>
                         </div>
                     </div>
+
                 </nav>
             </div>
 
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-slate-100 shadow">
+            <header v-if="$slots.header" class="bg-slate-100 dark:bg-slate-700 shadow">
                 <div class="max-w-7xl mx-auto py-4 px-4 sm:px-4 lg:px-8">
                     <slot name="header"/>
                 </div>
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="dark:bg-gray-900">
                 <slot/>
             </main>
 

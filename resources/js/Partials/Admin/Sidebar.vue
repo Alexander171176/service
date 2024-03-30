@@ -34,20 +34,51 @@ onUnmounted(() => {
 
 watch(sidebarExpanded, () => {
     localStorage.setItem('sidebar-expanded', sidebarExpanded.value)
-    document.querySelector('body').classList.toggle('sidebar-expanded', sidebarExpanded.value)
 })
 </script>
 
 <template>
     <div>
-        <div class="fixed inset-0 bg-cyan-950 bg-opacity-30 z-40 sm:hidden sm:z-auto transition-opacity duration-200"
+        <div class="fixed
+                    inset-0
+                    z-40
+                    bg-cyan-900
+                    dark:bg-gray-700
+                    dark:border-r
+                    dark:border-gray-600
+                    bg-opacity-30
+                    sm:hidden
+                    sm:z-auto
+                    transition-opacity duration-200"
              :class="sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'" aria-hidden="true"></div>
 
-        <div id="sidebar" ref="sidebar"
-             class="flex flex-col absolute z-40 left-0 top-0 sm:static sm:left-auto sm:top-auto sm:translate-x-0 h-screen overflow-y-scroll sm:overflow-y-auto no-scrollbar w-64 sm:w-20 sm:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-cyan-900 p-4 transition-all duration-200 ease-in-out"
+        <div id="sidebar" ref="sidebar" class="flex
+                                               flex-col
+                                               absolute
+                                               z-40
+                                               w-64
+                                               p-4
+                                               bg-cyan-900
+                                               dark:bg-gray-700
+                                               dark:border-r
+                                               dark:border-gray-600
+                                               left-0
+                                               top-0
+                                               sm:static
+                                               sm:left-auto
+                                               sm:top-auto
+                                               sm:translate-x-0
+                                               h-screen
+                                               overflow-y-scroll
+                                               sm:overflow-y-auto
+                                               no-scrollbar
+                                               sm:w-16
+                                               sm:sidebar-expanded:!w-64 2xl:!w-64
+                                               shrink-0
+                                               transition-all duration-200 ease-in-out"
              :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'">
 
-            <div class="flex justify-between mb-10 pr-3 sm:px-2">
+            <div class="flex justify-between items-center mb-10 pr-3 sm:px-0">
                 <button ref="trigger" class="sm:hidden text-slate-500 hover:text-slate-400"
                         @click.stop="$emit('close-sidebar')" aria-controls="sidebar" :aria-expanded="sidebarOpen">
                     <span class="sr-only">Закрыть</span>
@@ -58,11 +89,12 @@ watch(sidebarExpanded, () => {
                 <Link :href="route('dashboard')">
                     <ApplicationMark class="block h-9 w-auto"/>
                 </Link>
+                <span class="text-indigo-300 font-semibold text-lg hidden 2xl:block">Панель управления</span>
             </div>
 
             <div class="space-y-8">
                 <div>
-                    <h3 class="text-xs uppercase text-white font-semibold pl-3">
+                    <h3 class="text-center text-md uppercase text-white font-semibold pl-3">
                         <span class="hidden sm:block sm:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">•••</span>
                         <span class="sm:hidden sm:sidebar-expanded:block 2xl:block">Страницы</span>
                     </h3>
@@ -78,7 +110,7 @@ watch(sidebarExpanded, () => {
                                       d="M12 15c-1.654 0-3-1.346-3-3 0-.462.113-.894.3-1.285L6 6l4.714 3.301A2.973 2.973 0 0112 9c1.654 0 3 1.346 3 3s-1.346 3-3 3z"/>
                             </svg>
                             <span
-                                class="text-sm font-medium ml-3 sm:opacity-0 sm:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                class="font-medium ml-3 sm:opacity-0 sm:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Панель Администратора
                             </span>
                         </SidebarLink>
@@ -88,7 +120,7 @@ watch(sidebarExpanded, () => {
                                 <path class="fill-current text-blue-400" d="M12 6a3 3 0 110-6 3 3 0 010 6zm2 18h-4a1 1 0 01-1-1v-6H6v-6a3 3 0 013-3h6a3 3 0 013 3v6h-3v6a1 1 0 01-1 1z"></path>
                             </svg>
                             <span
-                                class="text-sm font-medium ml-3 sm:opacity-0 sm:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                                class="font-medium ml-3 sm:opacity-0 sm:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
                                 Панель Пользователя
                             </span>
                         </SidebarLink>
@@ -111,3 +143,9 @@ watch(sidebarExpanded, () => {
         </div>
     </div>
 </template>
+
+<style>
+.sidebar-expanded {
+    width: 16rem !important;
+}
+</style>

@@ -4,14 +4,14 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
 
 <template>
   <div>
-    <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
+    <div class="p-6 lg:p-8 bg-white dark:bg-slate-700 border-b border-gray-200">
       <ApplicationLogo class="block h-12 w-auto" />
 
-      <h1 class="mt-8 text-2xl font-medium text-gray-900">
+      <h1 class="mt-8 text-2xl font-medium text-gray-900 dark:text-slate-300">
         Добро пожаловать в ваше приложение Jetstream!
       </h1>
 
-      <p class="mt-6 text-gray-500 leading-relaxed">
+      <p class="mt-6 text-xl text-gray-500 dark:text-slate-200 leading-relaxed">
         Laravel Jetstream обеспечивает прекрасную и надежную отправную точку для вашего следующего
         приложения Laravel. Laravel разработан для того, чтобы помочь вам создать ваше приложение,
         используя простую, мощную и приятную среду разработки. Мы считаем, что вам должно нравиться
@@ -22,7 +22,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
     </div>
 
     <div
-      class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8"
+      class="bg-gray-200 dark:bg-slate-800 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8"
     >
       <div>
         <div class="flex items-center">
@@ -39,28 +39,28 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
               d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
             />
           </svg>
-          <h2 class="ms-3 text-xl font-semibold text-gray-900">
+          <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-slate-300">
             <a href="https://laravel.com/docs/10.x">Документация Laravel</a>
           </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 dark:text-slate-300 text-md leading-relaxed">
           В Laravel есть замечательная документация, охватывающая каждый аспект фреймворка.
           Независимо от того, являетесь ли вы новичком в фреймворке или имеете предыдущий опыт, мы
           рекомендуем прочитать всю документацию от начала до конца.
         </p>
 
-        <p class="mt-4 text-sm">
+        <p class="mt-4 text-md">
           <a
             href="https://laravel.com/docs"
-            class="inline-flex items-center font-semibold text-indigo-700"
+            class="inline-flex items-center font-semibold text-indigo-700 dark:text-pink-500"
           >
             Ознакомьтесь с документацией
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
-              class="ms-1 w-5 h-5 fill-indigo-500"
+              class="ms-1 w-5 h-5 fill-indigo-500 dark:fill-pink-500"
             >
               <path
                 fill-rule="evenodd"
@@ -86,12 +86,12 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
               d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
             />
           </svg>
-          <h2 class="ms-3 text-xl font-semibold text-gray-900">
+          <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-slate-300">
             <a href="https://laracasts.com">Laracasts</a>
           </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+        <p class="mt-4 text-gray-500 dark:text-slate-300 text-md leading-relaxed">
           Laracasts предлагает тысячи видеоуроков по разработке на Laravel, PHP и JavaScript.
           Ознакомьтесь с ними, убедитесь сами и значительно повысьте свои навыки разработки в
           процессе.
@@ -100,14 +100,14 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
         <p class="mt-4 text-sm">
           <a
             href="https://laracasts.com"
-            class="inline-flex items-center font-semibold text-indigo-700"
+            class="inline-flex items-center font-semibold text-indigo-700 dark:text-pink-500"
           >
             Начните смотреть трансляции Laracasts
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
-              class="ms-1 w-5 h-5 fill-indigo-500"
+              class="ms-1 w-5 h-5 fill-indigo-500 dark:fill-pink-500"
             >
               <path
                 fill-rule="evenodd"
@@ -134,12 +134,12 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
               d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
             />
           </svg>
-          <h2 class="ms-3 text-xl font-semibold text-gray-900">
+          <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-slate-300">
             <a href="https://tailwindcss.com/">Tailwind</a>
           </h2>
         </div>
 
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 dark:text-slate-300 text-md leading-relaxed">
           Laravel Jetstream создан с использованием Tailwind, потрясающего CSS-фреймворка, который
           не встанет у вас на пути. Вы будете поражены, насколько легко вы сможете создавать и
           поддерживать свежий, современный дизайн, имея под рукой этот замечательный фреймворк.
@@ -161,10 +161,10 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue'
               d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
             />
           </svg>
-          <h2 class="ms-3 text-xl font-semibold text-gray-900">Идентификация</h2>
+          <h2 class="ms-3 text-xl font-semibold text-gray-900 dark:text-slate-300">Идентификация</h2>
         </div>
 
-        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+          <p class="mt-4 text-gray-500 dark:text-slate-300 text-md leading-relaxed">
           В Laravel Jetstream включены средства аутентификации и регистрации, а также поддержка
           проверки электронной почты пользователей и сброса забытых паролей. Итак, вы можете
           приступать к самому важному: созданию вашего приложения.

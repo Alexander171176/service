@@ -1,17 +1,23 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
+import Welcome from '@/Components/Welcome.vue'
+import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
 </script>
 
 <template>
   <AppLayout title="Администратор">
     <template #header>
-        <h2 class="text-center font-semibold text-slate-800 text-xl leading-tight">Администратор ✨</h2>
+        <TitlePage>
+            Панель управления
+        </TitlePage>
     </template>
 
-    <div class="py-8">
-      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg"></div>
+      <div class="py-8">
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+              <div class="bg-white dark:bg-slate-700 overflow-hidden shadow-xl sm:rounded-lg">
+                  <Welcome />
+              </div>
+          </div>
       </div>
-    </div>
   </AppLayout>
 </template>

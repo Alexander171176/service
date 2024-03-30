@@ -2,8 +2,9 @@
 import {ref} from "vue";
 import {Head, Link, router} from '@inertiajs/vue3'
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
-import DropdownLink from '@/Components/DropdownLink.vue'
 import ApplicationMark from '@/Components/ApplicationMark.vue'
+import ThemeToggle from '@/Components/User/ThemeToggle/ThemeToggle.vue'
+import LogoutButton from '@/Components/User/Button/LogoutButton.vue'
 
 defineProps({
     title: String,
@@ -25,7 +26,7 @@ const logout = () => {
 
     <div class="min-h-screen w-full sm:fixed sm:top-0 sm:end-0 text-end z-10 shadow">
 
-        <nav class="bg-white border-b border-gray-100">
+        <nav class="bg-white border-b border-gray-100 dark:bg-slate-900">
 
             <!-- Primary Navigation Menu -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,20 +77,9 @@ const logout = () => {
 
                             <!-- logout -->
                             <form v-if="$page.props.auth.user" @submit.prevent="logout">
-                                <DropdownLink class="font-semibold
-                                                         text-gray-600
-                                                         text-lg
-                                                         px-3
-                                                         border border-orange-500
-                                                         hover:text-gray-900
-                                                         dark:text-gray-400
-                                                         dark:hover:text-whites
-                                                         focus:outline
-                                                         focus:outline-2
-                                                         focus:rounded-sm
-                                                         focus:outline-red-500" as="button">
+                                <LogoutButton>
                                     Выход
-                                </DropdownLink>
+                                </LogoutButton>
                             </form>
 
                             <template v-else>
@@ -129,6 +119,11 @@ const logout = () => {
 
                         </div>
 
+                    </div>
+
+                    <!-- ThemeToggle -->
+                    <div class="ml-2 flex items-center">
+                        <ThemeToggle/>
                     </div>
 
                     <!-- Hamburger -->
@@ -191,20 +186,9 @@ const logout = () => {
 
                     <!-- logout -->
                     <form v-if="$page.props.auth.user" @submit.prevent="logout" class="w-fit ml-4">
-                        <DropdownLink class="font-semibold
-                                                 text-gray-600
-                                                 text-lg
-                                                 px-3
-                                                 border border-orange-500
-                                                 hover:text-gray-900
-                                                 dark:text-gray-400
-                                                 dark:hover:text-white
-                                                 focus:outline
-                                                 focus:outline-2
-                                                 focus:rounded-sm
-                                                 focus:outline-red-500" as="button">
+                        <LogoutButton>
                             Выход
-                        </DropdownLink>
+                        </LogoutButton>
                     </form>
 
                     <template v-else>
@@ -247,10 +231,11 @@ const logout = () => {
             </div>
 
         </nav>
+
     </div>
 
     <div
-        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
+        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-slate-900 selection:bg-red-500 selection:text-white"
     >
         <div class="max-w-7xl mt-16 mx-auto p-6 lg:p-8">
 
