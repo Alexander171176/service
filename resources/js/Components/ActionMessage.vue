@@ -11,7 +11,7 @@ defineProps({
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-show="on" class="text-sm text-gray-600">
+      <div v-show="on" class="text-lg text-gray-700 dark:text-slate-300">
         <slot />
       </div>
     </transition>

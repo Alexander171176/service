@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { defineProps, defineEmits } from 'vue'
 import {Link} from '@inertiajs/vue3'
 import ApplicationMark from '@/Components/ApplicationMark.vue'
-import SidebarGroupLink from '@/Components/Admin/Link/SidebarGroupLink.vue'
+import SidebarGroupLink from '@/Components/User/Link/SidebarGroupLink.vue'
 
 const props = defineProps(['sidebarOpen'])
 const emit = defineEmits()

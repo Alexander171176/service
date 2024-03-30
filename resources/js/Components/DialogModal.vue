@@ -26,11 +26,11 @@ const close = () => {
 <template>
   <Modal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
     <div class="px-6 py-4">
-      <div class="text-lg font-medium text-gray-900">
+      <div class="text-xl font-medium text-gray-900">
         <slot name="title" />
       </div>
 
-      <div class="mt-4 text-sm text-gray-600">
+      <div class="mt-4 font-semibold text-lg text-violet-600">
         <slot name="content" />
       </div>
     </div>

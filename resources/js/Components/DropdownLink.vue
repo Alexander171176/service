@@ -32,6 +32,7 @@ defineProps({
             v-else-if="as == 'a'"
             :href="href"
             class="block
+                   w-full
                    px-4 py-2
                    text-md
                    leading-5
@@ -49,6 +50,7 @@ defineProps({
             v-else
             :href="href"
             class="block
+                   w-full
                    px-4 py-2
                    text-md
                    leading-5

@@ -93,7 +93,7 @@ const clearPhotoFileInput = () => {
           @change="updatePhotoPreview"
         />
 
-        <InputLabel for="photo" value="Photo" />
+        <InputLabel for="photo" value="Фото" />
 
         <!-- Current Profile Photo -->
         <div v-show="!photoPreview" class="mt-2">
@@ -112,14 +112,14 @@ const clearPhotoFileInput = () => {
           />
         </div>
 
-        <SecondaryButton class="mt-2 me-2" type="button" @click.prevent="selectNewPhoto">
+        <SecondaryButton class="mt-2 me-2 lowercase" type="button" @click.prevent="selectNewPhoto">
             Выберите новую фотографию
         </SecondaryButton>
 
         <SecondaryButton
           v-if="user.profile_photo_path"
           type="button"
-          class="mt-2"
+          class="mt-2 lowercase"
           @click.prevent="deletePhoto"
         >
             Удалить фотографию

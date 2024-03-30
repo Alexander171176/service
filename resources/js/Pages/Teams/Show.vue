@@ -1,9 +1,10 @@
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AdminLayout from '@/Layouts/AdminLayout.vue'
 import DeleteTeamForm from '@/Pages/Teams/Partials/DeleteTeamForm.vue'
 import SectionBorder from '@/Components/SectionBorder.vue'
 import TeamMemberManager from '@/Pages/Teams/Partials/TeamMemberManager.vue'
 import UpdateTeamNameForm from '@/Pages/Teams/Partials/UpdateTeamNameForm.vue'
+import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
 
 defineProps({
   team: Object,
@@ -13,9 +14,11 @@ defineProps({
 </script>
 
 <template>
-  <AppLayout title="Team Settings">
+  <AdminLayout title="Team Settings">
     <template #header>
-        <h2 class="font-semibold text-slate-800 text-xl leading-tight">Настройки Группы ✨</h2>
+        <TitlePage>
+            Настройки Группы
+        </TitlePage>
     </template>
 
     <div>
@@ -36,5 +39,5 @@ defineProps({
         </template>
       </div>
     </div>
-  </AppLayout>
+  </AdminLayout>
 </template>

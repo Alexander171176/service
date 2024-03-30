@@ -1,6 +1,7 @@
 <script setup>
 import ApiTokenManager from '@/Pages/API/Partials/ApiTokenManager.vue'
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AdminLayout from '@/Layouts/AdminLayout.vue'
+import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
 
 defineProps({
   tokens: Array,
@@ -10,9 +11,11 @@ defineProps({
 </script>
 
 <template>
-  <AppLayout title="API Tokens">
+  <AdminLayout title="API Tokens">
     <template #header>
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">API Токены</h2>
+        <TitlePage>
+            API Токены
+        </TitlePage>
     </template>
 
     <div>
@@ -24,5 +27,5 @@ defineProps({
         />
       </div>
     </div>
-  </AppLayout>
+  </AdminLayout>
 </template>

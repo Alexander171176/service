@@ -109,19 +109,19 @@ const disableTwoFactorAuthentication = () => {
     </template>
 
     <template #content>
-      <h3 v-if="twoFactorEnabled && !confirming" class="text-lg font-medium text-gray-900">
+      <h3 v-if="twoFactorEnabled && !confirming" class="text-xl font-medium text-orange-400 dark:text-orange-200">
           Вы включили двухфакторную аутентификацию.
       </h3>
 
-      <h3 v-else-if="twoFactorEnabled && confirming" class="text-lg font-medium text-gray-900">
+      <h3 v-else-if="twoFactorEnabled && confirming" class="text-xl font-medium text-orange-400 dark:text-orange-200">
           Завершите включение двухфакторной аутентификации.
       </h3>
 
-      <h3 v-else class="text-lg font-medium text-gray-900">
+      <h3 v-else class="text-xl font-medium text-orange-400 dark:text-orange-200">
           Вы не включили двухфакторную аутентификацию.
       </h3>
 
-      <div class="mt-3 max-w-xl text-sm text-gray-600">
+      <div class="mt-3 max-w-xl font-semibold text-lg text-indigo-900 dark:text-sky-200">
         <p>
             Когда включена двухфакторная аутентификация, вам будет предложено ввести безопасный случайный токен
             во время аутентификации. Вы можете получить этот токен с помощью Google Authenticator вашего телефона
@@ -131,7 +131,7 @@ const disableTwoFactorAuthentication = () => {
 
       <div v-if="twoFactorEnabled">
         <div v-if="qrCode">
-          <div class="mt-4 max-w-xl text-sm text-gray-600">
+          <div class="mt-4 max-w-xl font-semibold text-lg text-indigo-900 dark:text-sky-200">
             <p v-if="confirming" class="font-semibold">
                 Чтобы завершить включение двухфакторной аутентификации, отсканируйте следующий QR-код
                 с помощью приложения для проверки подлинности вашего телефона или введите ключ настройки
@@ -147,7 +147,7 @@ const disableTwoFactorAuthentication = () => {
 
           <div class="mt-4 p-2 inline-block bg-white" v-html="qrCode" />
 
-          <div v-if="setupKey" class="mt-4 max-w-xl text-sm text-gray-600">
+          <div v-if="setupKey" class="mt-4 max-w-xl text-lg text-orange-500">
             <p class="font-semibold">Setup Key: <span v-html="setupKey"></span></p>
           </div>
 
@@ -171,7 +171,7 @@ const disableTwoFactorAuthentication = () => {
         </div>
 
         <div v-if="recoveryCodes.length > 0 && !confirming">
-          <div class="mt-4 max-w-xl text-sm text-gray-600">
+          <div class="mt-4 max-w-xl text-lg text-indigo-900 dark:text-sky-200">
             <p class="font-semibold">
                 Сохраните эти коды восстановления в безопасном менеджере паролей.
                 Они могут быть использованы для восстановления доступа к вашей учетной записи
@@ -179,7 +179,7 @@ const disableTwoFactorAuthentication = () => {
             </p>
           </div>
 
-          <div class="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-sm bg-gray-100 rounded-lg">
+          <div class="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-lg bg-gray-100 rounded-lg">
             <div v-for="code in recoveryCodes" :key="code">
               {{ code }}
             </div>

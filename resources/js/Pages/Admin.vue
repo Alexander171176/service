@@ -1,11 +1,11 @@
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AdminLayout from '@/Layouts/AdminLayout.vue'
 import Welcome from '@/Components/Welcome.vue'
 import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
 </script>
 
 <template>
-  <AppLayout title="Администратор">
+  <AdminLayout title="Администратор">
     <template #header>
         <TitlePage>
             Панель управления
@@ -19,5 +19,5 @@ import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
               </div>
           </div>
       </div>
-  </AppLayout>
+  </AdminLayout>
 </template>

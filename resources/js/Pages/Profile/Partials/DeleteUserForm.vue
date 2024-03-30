@@ -44,7 +44,7 @@ const closeModal = () => {
         <template #description> Безвозвратно удалить свою учетную запись.</template>
 
         <template #content>
-            <div class="max-w-xl text-sm text-gray-600">
+            <div class="max-w-xl font-semibold text-lg text-indigo-900 dark:text-sky-200">
                 Как только ваша учетная запись будет удалена, все ее ресурсы и данные будут удалены безвозвратно.
                 Перед удалением вашей учетной записи, пожалуйста, загрузите любые данные или информацию,
                 которые вы хотите сохранить.

@@ -51,7 +51,7 @@ const closeModal = () => {
     </template>
 
     <template #content>
-      <div class="max-w-xl text-sm text-gray-600">
+      <div class="max-w-xl font-semibold text-lg text-indigo-900 dark:text-sky-200">
           При необходимости вы можете выйти из всех других сессий вашего браузера на всех ваших устройствах.
           устройства. Ниже перечислены некоторые из ваших последних сессий; однако этот список может быть
           неполным. Если вы считаете, что ваша учетная запись была взломана, вам также следует обновить свой
@@ -96,17 +96,17 @@ const closeModal = () => {
           </div>
 
           <div class="ms-3">
-            <div class="text-sm text-gray-600">
+            <div class="font-semibold text-lg text-orange-400 dark:text-violet-300">
               {{ session.agent.platform ? session.agent.platform : 'Unknown' }} -
               {{ session.agent.browser ? session.agent.browser : 'Unknown' }}
             </div>
 
             <div>
-              <div class="text-xs text-gray-500">
+              <div class="font-semibold text-lg text-gray-900 dark:text-slate-300">
                 {{ session.ip_address }},
 
-                <span v-if="session.is_current_device" class="text-green-500 font-semibold"
-                  >Это устройство</span
+                <span v-if="session.is_current_device" class="font-semibold text-green-500 dark:text-orange-300"
+                  > - Это устройство</span
                 >
                 <span v-else>Последний активный {{ session.last_active }}</span>
               </div>

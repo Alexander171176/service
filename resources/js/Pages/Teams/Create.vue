@@ -1,12 +1,15 @@
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AdminLayout from '@/Layouts/AdminLayout.vue'
 import CreateTeamForm from '@/Pages/Teams/Partials/CreateTeamForm.vue'
+import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
 </script>
 
 <template>
-  <AppLayout title="Create Team">
+  <AdminLayout title="Create Team">
     <template #header>
-        <h2 class="font-semibold text-slate-800 text-xl leading-tight">Создать Группу ✨</h2>
+        <TitlePage>
+            Создать Группу
+        </TitlePage>
     </template>
 
     <div>
@@ -14,5 +17,5 @@ import CreateTeamForm from '@/Pages/Teams/Partials/CreateTeamForm.vue'
         <CreateTeamForm />
       </div>
     </div>
-  </AppLayout>
+  </AdminLayout>
 </template>
