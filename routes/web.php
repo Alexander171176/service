@@ -25,22 +25,20 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+    Route::get('/dashboard', function () {return Inertia::render('Dashboard');})
+        ->name('dashboard');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/admin', function () {
-        return Inertia::render('Admin');
-    })->name('admin');
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+    Route::get('/admin', function () {return Inertia::render('Admin');})
+        ->name('admin');
 });
+
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
+    ->prefix('admin')
+    ->group(function () {
+        Route::resource('/users', \App\Http\Controllers\Admin\User\UserController::class);
+        Route::resource('/roles', \App\Http\Controllers\Admin\Role\RoleController::class);
+        Route::resource('/permissions', \App\Http\Controllers\Admin\Permission\PermissionController::class);
+    });

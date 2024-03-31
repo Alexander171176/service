@@ -7,11 +7,13 @@ import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue'
 import Sidebar from '@/Partials/Admin/Sidebar.vue'
 import ApplicationMark from '@/Components/ApplicationMark.vue'
 import ThemeToggle from '@/Components/User/ThemeToggle/ThemeToggle.vue'
+import { usePermission } from '@/composables/permissions.js'
 
 defineProps({
     title: String
 })
 
+const { HasRole } = usePermission();
 const sidebarOpen = ref(false)
 const showingNavigationDropdown = ref(false)
 
@@ -418,7 +420,7 @@ const logout = () => {
             </div>
 
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-slate-100 dark:bg-slate-700 shadow">
+            <header v-if="$slots.header" class="bg-slate-100 dark:bg-sky-900 shadow">
                 <div class="max-w-7xl mx-auto py-4 px-4 sm:px-4 lg:px-8">
                     <slot name="header"/>
                 </div>

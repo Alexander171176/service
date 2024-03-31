@@ -43,5 +43,13 @@
 
 11) create seeders <br>
     `docker exec php-app php artisan make:seeder RoleSeeder` <br>
-    `docker exec php-app php artisan make:seeder AdminSeeder` <br>
-    `docker exec php-app php artisan db:seed` <br>
+
+12) Create resource UserResource, RoleResource, PermissionResource <br>
+    `docker exec php-app php artisan make:resource Admin/User/UserResource` <br>
+    `docker exec php-app php artisan make:resource Admin/Role/RoleResource` <br>
+    `docker exec php-app php artisan make:resource Admin/Permission/PermissionResource` <br>
+
+13) Create resource controllers UserController,RoleController,PermissionController <br>
+    `docker exec php-app php artisan make:controller Admin/User/UserController --resource` <br>
+    `docker exec php-app php artisan make:controller Admin/Role/RoleController --resource` <br>
+    `docker exec php-app php artisan make:controller Admin/Permission/PermissionController --resource` <br>

@@ -19,5 +19,7 @@ import TitlePage from '@/Components/Admin/Headlines/TitlePage.vue'
               </div>
           </div>
       </div>
+
+      <pre>{{ $page.props }}</pre>
   </AdminLayout>
 </template>
