@@ -27,7 +27,7 @@ const deleteUser = (id) => {
 </script>
 
 <template>
-    <AdminLayout title="Администратор">
+    <AdminLayout title="Пользователи">
         <template #header>
             <TitlePage>
                 Пользователи
@@ -54,16 +54,16 @@ const deleteUser = (id) => {
             </div>
             <div class="bg-gray-100 dark:bg-slate-900 overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="px-5 py-1 text-right">
-                    <h2 class="font-semiboldtext-slate-800 dark:text-slate-100">
+                    <h2 class="text-lg font-semiboldtext-slate-800 dark:text-slate-100">
                         Всего: <span class="text-blue-500 dark:text-blue-200 font-medium">
                         {{ usersCount }}</span>
                     </h2>
                 </div>
-                <div class="bg-white dark:bg-cyan-700 shadow-lg rounded-sm border border-slate-200 relative">
+                <div class="bg-white dark:bg-slate-700 shadow-lg rounded-sm border border-slate-200 relative">
                     <div class="overflow-x-auto">
                         <table v-if="usersCount > 0" class="table-auto w-full">
                             <thead
-                                class="text-xs
+                                class="text-md
                                        font-semibold
                                        uppercase
                                        text-slate-700
@@ -89,10 +89,10 @@ const deleteUser = (id) => {
                                 </th>
                             </tr>
                             </thead>
-                            <tbody class="text-sm dark:text-slate-100 divide-y divide-slate-200"
+                            <tbody class="text-lg dark:text-slate-100 divide-y divide-slate-200"
                                    v-for="user in users" :key="user.id">
                             <!-- Отображение сущностей -->
-                            <tr class="border-b-2 hover:bg-slate-100 dark:hover:bg-cyan-500">
+                            <tr class="border-b-2 hover:bg-slate-100 dark:hover:bg-cyan-800">
                                 <td class="px-2 first:pl-5 last:pr-5 py-1 whitespace-nowrap px">
                                     <div class="text-left">{{ user.id }}</div>
                                 </td>

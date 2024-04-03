@@ -15,17 +15,18 @@ const props = defineProps({
 
 <template>
     <div class="text-center mr-1">
-        <Link :href="href" class="btn
-                                  flex
-                                  items-center
-                                  py-2 px-2
-                                  border-solid
-                                  rounded
-                                  border
-                                  border-slate-300
-                                  hover:border-sky-500
-                                  dark:border-violet-200
-                                  dark:hover:border-slate-100" :title="tooltipText">
+        <Link :href="href"
+              class="btn
+                      flex
+                      items-center
+                      py-2 px-2
+                      border-solid
+                      rounded
+                      border
+                      border-slate-300
+                      hover:border-sky-500
+                      dark:border-violet-200
+                      dark:hover:border-slate-100" :title="tooltipText">
             <slot name="svg">
                 <!-- По умолчанию ваш SVG будет тут -->
                 <svg class="w-4 h-4

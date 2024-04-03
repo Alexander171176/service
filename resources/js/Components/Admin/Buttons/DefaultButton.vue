@@ -20,7 +20,7 @@ const isPressed = ref(false)
                  px-3 py-1
                  bg-sky-600
                  text-white
-                 rounded-sm
+                 rounded-md
                  shadow-md
                  transition-colors
                  duration-300
@@ -31,7 +31,7 @@ const isPressed = ref(false)
           @mousedown="isPressed = true"
           @mouseup="isPressed = false"
           :class="{ 'ring-2 ring-sky-600 ring-offset-2 ring-offset-white': isPressed }">
-    <span class="hidden xs:block ml-2">
+    <span class="ml-2">
       <slot name="icon">
         <!-- По умолчанию ваш SVG будет тут -->
         <svg class="w-4 h-4 fill-current opacity-50 shrink-0" viewBox="0 0 16 16">
@@ -39,7 +39,7 @@ const isPressed = ref(false)
         </svg>
       </slot>
     </span>
-        <span class="hidden xs:block ml-2">
+        <span class="ml-2">
       <slot />
     </span>
     </Link>

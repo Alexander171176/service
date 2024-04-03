@@ -53,3 +53,7 @@
     `docker exec php-app php artisan make:controller Admin/User/UserController --resource` <br>
     `docker exec php-app php artisan make:controller Admin/Role/RoleController --resource` <br>
     `docker exec php-app php artisan make:controller Admin/Permission/PermissionController --resource` <br>
+
+14) Create requests CreateRoleRequest, CreatePermissionRequest <br>
+    `docker exec php-app php artisan make:request Admin/Role/RoleRequest` <br>
+    `docker exec php-app php artisan make:request Admin/Permission/PermissionRequest` <br>
